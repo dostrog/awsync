@@ -26,7 +26,8 @@
     },
     "require-dev": {
         "mockery/mockery": "^1.4.2",
-        "pestphp/pest": "^1.0"
+        "pestphp/pest": "^1.0",
+        "roave/security-advisories": "dev-master"
     },
     "autoload": {
         "psr-4": {

@@ -17,6 +17,7 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
+        "ext-json": "*",
         "fakerphp/faker": "^1.13",
         "illuminate/translation": "^8.29",
         "laravel-zero/framework": "^8.4",

@@ -1,6 +1,8 @@
 /node_modules
 /vendor
-/builds
+/builds/assets
+/builds/awsync-*
+/builds/journal-*
 /.phpstorm.meta.php
 /_ide_helper*
 /doc

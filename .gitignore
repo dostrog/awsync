@@ -1,0 +1,15 @@
+/node_modules
+/vendor
+/builds
+/.phpstorm.meta.php
+/_ide_helper*
+/doc
+/assets
+.env
+.env.production
+.env.backup
+.phpunit.result.cache
+npm-debug.log
+
+TODO.md
+journal-*

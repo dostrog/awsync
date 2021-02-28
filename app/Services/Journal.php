@@ -123,7 +123,9 @@ class Journal
             ->where('onAmazon', false)
             ->where('onLocal', true);
 
-        $toResolveAmazon = $toResolve->diffKeys($toResolveLocal);
+        $toResolveAmazon = $toResolve
+            ->where('onAmazon', true)
+            ->where('onLocal', false);
 
         $toResolveLocal->transform(function($file) use ($strategy, &$toResolveAmazon){
             $theCommonAmazonItem = $toResolveAmazon

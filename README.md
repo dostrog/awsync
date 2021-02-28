@@ -1,14 +1,14 @@
 # AWsync
 
-<h4> This is a test assigment project (B1)</h4>
+Simple, lightweight console utility to sync local folder with AWS S3 bucket.
 
-[Description on Google Docs](https://docs.google.com/document/d/1dC0PrfmIbhP3EtG-3gwdto5vrv83m1DAmjSiNOSCAaQ/edit?usp=sharing)
+_This is a test assigment project (B1)_ [Description on Google Docs](https://docs.google.com/document/d/1dC0PrfmIbhP3EtG-3gwdto5vrv83m1DAmjSiNOSCAaQ/edit?usp=sharing)
 
 ------
 
 ## Installation
 
-Project is written on 100% PHP and may be started from within project folder or from PHAR archive as a standalone application.
+Project is written on 100% PHP and may be started from within project folder (`php awsync bucket42`) or from PHAR archive as a standalone application.
 
 - Copy PHAR archive to the localhost
 - Create `.env` file in the same folder where PHAR archive is

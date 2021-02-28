@@ -15,7 +15,7 @@ class PolygonAWS extends Polygon
 
     use AWS;
 
-    public function __construct(string $bucket, int $quantity, $folder)
+    public function __construct(string $bucket, int $quantity, $folder = null)
     {
         parent::__construct($folder ?? '', $quantity);
 

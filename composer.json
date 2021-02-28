@@ -1,18 +1,18 @@
 {
-    "name": "laravel-zero/laravel-zero",
-    "description": "The Laravel Zero Framework.",
-    "keywords": ["framework", "laravel", "laravel zero", "console", "cli"],
-    "homepage": "https://laravel-zero.com",
+    "name": "dostrog/awsync",
+    "description": "Simple, lightweight console utility to sync local folder with AWS S3 bucket.",
+    "keywords": ["utility", "aws s3", "console", "cli"],
+    "homepage": "https://github.com/dostrog/awsync",
     "type": "project",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
-        "source": "https://github.com/laravel-zero/laravel-zero"
+        "issues": "https://github.com/dostrog/awsync/issues",
+        "source": "https://github.com/dostrog/awsync"
     },
     "authors": [
         {
-            "name": "Nuno Maduro",
-            "email": "enunomaduro@gmail.com"
+            "name": "Sergey Donin",
+            "email": "sergey.donin@gmail.com"
         }
     ],
     "require": {

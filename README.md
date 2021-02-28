@@ -1,8 +1,14 @@
-# AWsync
+# Awsync
 
 Simple, lightweight console utility to sync local folder with AWS S3 bucket.
 
 _This is a test assigment project (B1)_ [Description on Google Docs](https://docs.google.com/document/d/1dC0PrfmIbhP3EtG-3gwdto5vrv83m1DAmjSiNOSCAaQ/edit?usp=sharing)
+
+Used technologies:
+
+- [PHP 7.4](https://www.php.net)
+- [Laravel Zero - Micro-framework for console applications](https://laravel-zero.com)
+- [League Flysystem - Filesystem abstraction for PHP](https://flysystem.thephpleague.com/)
 
 ------
 
@@ -10,7 +16,7 @@ _This is a test assigment project (B1)_ [Description on Google Docs](https://doc
 
 Project is written on 100% PHP and may be started from within project folder (`php awsync bucket42`) or from PHAR archive as a standalone application.
 
-- Copy PHAR archive to the localhost
+- Copy PHAR archive to the localhost from [https://github.com/dostrog/awsync/tree/develop/builds](https://github.com/dostrog/awsync/tree/develop/builds)
 - Create `.env` file in the same folder where PHAR archive is
 
 Example of .env file
@@ -29,7 +35,7 @@ AWS_ENDPONIT="http://127.0.0.1:9000"
 
 - Create test data with random number of files (with random data within). **NB! existing data may be overwritten! by using commands `polygon:aws` and `polygon:local`**
     ```shell
-    $ ./awsync polygon bucket42
+    $ php awsync polygon bucket42
     ```
     It will populate test files on localhost (`./assets/bucket42`) and other number of test files on AWS S3 bucket named `bucket42`. There will be files with random names and sizes, files with the same name and size on both filesystems, files with the same name BUT different sizes on both filesystems.
     
@@ -40,10 +46,10 @@ AWS_ENDPONIT="http://127.0.0.1:9000"
     // 'BiggerPriority' - file with bigger size takes precedence / bigger file will be on both filesystems
     // 'SmallerPriority' - file with smaller size takes precedence / smaller file will be on both filesystems
     ```
-- Run command within terminal
+- Run command within terminal 
 
 ```shell
-$ ./awsync sync bucket42
+$ php awsync sync bucket42. Log (journal) file `journal-bucket42.json` will be created in the current directory.
 
 Current status of folder/bucket : journal-bucket42.json
 +-----------------+----------+-----------+
@@ -72,19 +78,59 @@ Sync files in local folder with AWS S3 Bucket...
 +-----------------+----------+-----------+
 ```
 
+```shell
+$ more journal-bucket47.json|more
+```
+```json
+[
+    {
+    "timestamp": 1614544319,
+    "size": 78848,
+    "basename": "0LtSysvabssdqlK0XsgeuwTm9IyYjyFE.p67",
+    "synced": true,
+    "syncDateTime": "2021-02-28T20:32:03.830419Z",
+    "syncBy": "DontTouch",
+    "onLocal": true,
+    "onAmazon": true
+    },
+        ...
+    {
+    "basename": "8Tzhs5YbkKYybRoEmGR5Ql96lddJSvjk.B1j",
+    "timestamp": 1614544586,
+    "size": "1024",
+    "synced": true,
+    "syncDateTime": "2021-02-28T20:36:32.723098Z",
+    "syncBy": "Download",
+    "onLocal": true,
+    "onAmazon": true
+    },
+        ...
+    {
+    "timestamp": 1614544586,
+    "size": 29696,
+    "basename": "named-2xeUNapvdy0bpPn4yl11s4y4WrE1Xflc.MTX",
+    "synced": true,
+    "syncDateTime": "2021-02-28T20:36:32.771889Z",
+    "syncBy": "Upload",
+    "onLocal": true,
+    "onAmazon": true
+    }
+]
+```
+
 ## Using
 
 Project is written on 100% PHP and may be started from within project folder or from PHAR archive as a standalone application. 
 
 ```shell
-./awsync bucket42
+php awsync sync bucket42
 ```
 
 ## Help
 
 ```shell
 
-$ ./awsync
+$ php awsync
 
 Awsync  1.0.7
 

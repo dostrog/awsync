@@ -2,8 +2,6 @@
 
 Simple, lightweight console utility to sync local folder with AWS S3 bucket.
 
-_This is a test assigment project (B1)_ [Description on Google Docs](https://docs.google.com/document/d/1dC0PrfmIbhP3EtG-3gwdto5vrv83m1DAmjSiNOSCAaQ/edit?usp=sharing)
-
 Used technologies:
 
 - [PHP 7.4](https://www.php.net)
